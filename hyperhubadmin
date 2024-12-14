@@ -1,0 +1,66 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/lime"))()
+local w = Library:Window("Main:MM2")
+
+w:Button("by:hyper hub", function()
+   print("Printed")
+end)
+
+w:Toggle("ดูชื่อ", function(v)
+   print(v)
+while wait() do
+     pcall(function()
+       for i,v in pairs(game.Players:GetChildren()) do
+            if not v.Character.Head:FindFirstChild("ESP") then
+                local BillboardGui = Instance.new("BillboardGui")
+                local TextLabel = Instance.new("TextLabel")
+                BillboardGui.Parent = v.Character.Head
+                BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                BillboardGui.Active = true
+                BillboardGui.Name = "ESP"
+                BillboardGui.AlwaysOnTop = true
+                BillboardGui.LightInfluence = 1.000
+                BillboardGui.Size = UDim2.new(0, 200, 0, 50)
+                BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+                TextLabel.Parent = BillboardGui
+                TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                TextLabel.BackgroundTransparency = 1.000
+                TextLabel.Size = UDim2.new(0, 200, 0, 50)
+                TextLabel.Font = Enum.Font.GothamBold
+                TextLabel.Text = v.Name
+                TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                TextLabel.TextScaled = true
+                TextLabel.TextSize = 14.000
+                TextLabel.TextStrokeTransparency = 0.000
+                TextLabel.TextWrapped = true
+            end
+        end
+    end) 
+end
+end)
+w:Toggle("มองทะลุ<กดก่อนเริ่มทุกครั้ง>", function(v)
+   print(v)
+loadstring(game:HttpGet("https://pastebin.com/raw/Cr4mQZRv"))()
+end)
+w:Toggle("วาปกลับล็อคบี้", function(v)
+   print(v)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-108.184975, 138.408417, 31.349329, -0.999850035, -1.83840675e-05, -0.0173174515, -1.64243374e-05, 1, -0.000113307186, 0.0173174534, -0.000113005764, -0.999850035)
+end)
+w:Toggle("สำหรับแอดมินมึงไม่ใช้แอดมินไม่ต้องกด", function(v)
+   print(v)
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local players = game:GetService("Players")
+
+-- ฟังก์ชันสำหรับส่งข้อความไปยังผู้เล่นทั้งหมด
+local function sendAutoMessage()
+    for _, player in pairs(players:GetPlayers()) do
+        player:Kick("กดหาพ่อมึงอ่อกุบอกละอย่ากดโดนกุเตะไปดิไอควยยย")
+    end
+end
+
+-- รันฟังก์ชันทันทีเมื่อเกมเริ่มต้น
+sendAutoMessage()
+end)
+w:Toggle("แจกสตริปแอดมินฟรี", function(v)
+   print(v)
+loadstring(game:HttpGet"https://pastebin.com/raw/3P1z104N")()
+end)
